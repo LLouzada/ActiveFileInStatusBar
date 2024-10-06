@@ -2,7 +2,8 @@
 	"compilerOptions": {
 		"module": "commonjs",
 		"target": "ES5",
-		"noLib": true
+		"noLib": false,
+		"lib": ["ES5"]
 	},
 	"exclude": [
 		"node_modules"

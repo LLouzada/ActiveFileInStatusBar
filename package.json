@@ -1,9 +1,9 @@
 {
-  "name": "ActiveFileInStatusBar",
-  "displayName": "Active File In StatusBar",
+  "name": "loumads-active-file-in-statusbar",
+  "displayName": "Loumads Active File In StatusBar",
   "description": "Add statusbar entry to show path for currently active file.",
-  "version": "1.0.3",
-  "publisher": "RoscoP",
+  "version": "1.0.0",
+  "publisher": "LLouzada",
   "engines": {
     "vscode": "^0.10.1"
   },
@@ -16,15 +16,17 @@
   "icon": "media/icon.png",
   "galleryBanner": {
     "theme": "dark",
-    "color": "#614051"
+    "color": "#0D67B5"
   },
-  "icon_attribution": "Icon made by [Anton Saputro](http://www.flaticon.com/authors/anton-saputro) from [Flaticon](http://www.flaticon.com) is licensed by [Creative Commons BY 3.0](http://creativecommons.org/licenses/by/3.0/)",
+  "icon_attribution": "",
   "main": "./extension",
   "contributes": {
-      "commands": [{
-          "command": "extension.ActiveFileInStatusBarClicked",
-          "title": "ActiveFileInStatusBarClicked"
-      }],
+    "commands": [
+      {
+        "command": "extension.ActiveFileInStatusBarClicked",
+        "title": "ActiveFileInStatusBarClicked"
+      }
+    ],
     "configuration": {
       "type": "object",
       "title": "ActiveFileInStatusBar configuration",
@@ -41,13 +43,23 @@
         },
         "ActiveFileInStatusBar.revealFile": {
           "type": "boolean",
-          "default": false,
+          "default": true,
           "description": "Reveal the active file in the file system."
+        },
+        "ActiveFileInStatusBar.revealFileInExplorerView": {
+          "type": "boolean",
+          "default": true,
+          "description": "Reveal the active file in the explorer view."
         },
         "ActiveFileInStatusBar.color": {
           "type": "string",
-          "default": "",
+          "default": "#FFFF00",
           "description": "Set text color for the filename in the status bar."
+        },
+        "ActiveFileInStatusBar.copyToClipboard": {
+          "type": "boolean",
+          "default": true,
+          "description": "Copy the active file path to clipboard."
         }
       }
     }
@@ -56,9 +68,7 @@
     "type": "git",
     "url": "https://github.com/RoscoP/ActiveFileInStatusBar"
   },
-  "dependencies": {
-    "copy-paste": "^1.2.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "vscode": "0.10.x"
   }

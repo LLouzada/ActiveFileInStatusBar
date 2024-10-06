@@ -15,8 +15,12 @@ Install [ActiveFileInStatusBar](https://marketplace.visualstudio.com/items?itemN
 "ActiveFileInStatusBar.fullpath": true,
 // Reveal the active file in the file system.
 "ActiveFileInStatusBar.revealFile": false,
+// Reveal the active file in the explorer view.
+"ActiveFileInStatusBar.revealFileInExplorer": true,
 // Set text color for the filename in the status bar.
 "ActiveFileInStatusBar.color": "",
+// Copy the active file path to the clipboard.
+"ActiveFileInStatusBar.copyToClipboard": true,
 ```
 
 ## Contribute ##

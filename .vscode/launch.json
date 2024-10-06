@@ -3,12 +3,23 @@
 	"version": "0.1.0",
 	"configurations": [
 		{
+			"args": [
+				"--extensionDevelopmentPath=${workspaceFolder}"
+			],
+			"name": "Launch Extension",
+			"outFiles": [
+				"${workspaceFolder}/out/**/*.js"
+			],
+			"preLaunchTask": "npm",
+			"request": "launch",
+			"type": "extensionHost"
+		},
+		{
 			"name": "Launch Extension",
 			"type": "extensionHost",
 			"request": "launch",
 			"runtimeExecutable": "${execPath}",
 			"args": ["--extensionDevelopmentPath=${workspaceRoot}" ],
-			"stopOnEntry": false
 		},
 		{
 			"name": "Launch Tests",
@@ -16,7 +27,6 @@
 			"request": "launch",
 			"runtimeExecutable": "${execPath}",
 			"args": ["--extensionDevelopmentPath=${workspaceRoot}", "--extensionTestsPath=${workspaceRoot}/test" ],
-			"stopOnEntry": false
 		}
 	]
 }
