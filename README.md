@@ -2,6 +2,9 @@
 
 - Fork of [ActiveFileInStatusBar](https://marketplace.visualstudio.com/items?itemName=RoscoP.ActiveFileInStatusBar), adding a context menu with utility commands when clicking on the status bar item.
 
+## Install
+- [Loumads Active File In Status Bar](https://marketplace.visualstudio.com/items?itemName=LoumadSoft.loumads-active-file-in-statusbar)
+
 ## Original Repository 
 [ActiveFileInStatusBar Github Repository](https://github.com/RoscoP/ActiveFileInStatusBar)
 
