@@ -1,27 +1,10 @@
-# Active File In Status Bar #
-[Visual Studio Code](https://code.visualstudio.com/) extension for showing the full path of the currently active file in the status bar.
+# Loumads Active File In Status Bar 
 
-![ActiveFileInStatusBar in action](media/ActiveFileInStatusBar.gif)
+- Fork of [ActiveFileInStatusBar](https://marketplace.visualstudio.com/items?itemName=RoscoP.ActiveFileInStatusBar), adding a context menu with utility commands when clicking on the status bar item.
 
-## Install ##
-Install [ActiveFileInStatusBar](https://marketplace.visualstudio.com/items?itemName=RoscoP.ActiveFileInStatusBar) directly from the Visual Studio Code extension gallery. 
+## Original Repository 
+[ActiveFileInStatusBar Github Repository](https://github.com/RoscoP/ActiveFileInStatusBar)
 
-## Options ##
+[Visual Studio Code](https://code.visualstudio.com/) extension for showing the full path of the currently active file in the status bar and add context menu with utility commands when clicking on the status bar item.
 
-```javascript
-// Enable/Disable ActiveFileInStatusBar
-"ActiveFileInStatusBar.enable": true,
-// Show fullpath or relative path in status bar.
-"ActiveFileInStatusBar.fullpath": true,
-// Reveal the active file in the file system.
-"ActiveFileInStatusBar.revealFile": false,
-// Reveal the active file in the explorer view.
-"ActiveFileInStatusBar.revealFileInExplorer": true,
-// Set text color for the filename in the status bar.
-"ActiveFileInStatusBar.color": "",
-// Copy the active file path to the clipboard.
-"ActiveFileInStatusBar.copyToClipboard": true,
-```
 
-## Contribute ##
-See ActiveFileInStatusBar's [github page](https://github.com/RoscoP/ActiveFileInStatusBar)

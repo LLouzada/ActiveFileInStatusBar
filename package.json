@@ -1,9 +1,9 @@
 {
   "name": "loumads-active-file-in-statusbar",
   "displayName": "Loumads Active File In StatusBar",
-  "description": "Add statusbar entry to show path for currently active file.",
+  "description": "Add statusbar entry to show path for currently active file and context menu with utility commands.",
   "version": "1.0.0",
-  "publisher": "LLouzada",
+  "publisher": "LoumadSoft",
   "engines": {
     "vscode": "^0.10.1"
   },
