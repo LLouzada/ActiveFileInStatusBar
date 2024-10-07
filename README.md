@@ -2,7 +2,7 @@
 
 ![Loumads Active File In Status Bar](https://github.com/LLouzada/LoumadsActiveFileInStatusBar/raw/master/media/example.gif)
 
-A [Visual Studio Code](https://code.visualstudio.com/) extension that displays the full path of the currently active file in the status bar. It also adds a context menu with utility commands when you click on the status bar item.
+A [Visual Studio Code](https://code.visualstudio.com/) extension that displays the path of the currently active file in the status bar (full or relative). It also adds a context menu with utility commands when you click on the status bar item.
 
 This project is a fork of [ActiveFileInStatusBar](https://marketplace.visualstudio.com/items?itemName=RoscoP.ActiveFileInStatusBar), with added functionality such as a context menu with utility commands, bug fixes and usage of newer VSCode APIs.
 
