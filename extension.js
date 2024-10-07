@@ -2,7 +2,8 @@ var vscode = require("vscode");
 var path = require("path");
 
 var statusBar = null;
-var filePath = "";
+var fullFilePath = "";
+var relativeFilePath = "";
 
 /**
  *  Called when extension is activated
@@ -37,7 +38,8 @@ function registerCommandActiveFileInStatusBarClicked() {
       const options = [
         { label: "Reveal in Explorer View", action: "revealInExplorerView" },
         { label: "Reveal in OS File Explorer", action: "revealInOS" },
-        { label: "Copy File Path to Clipboard", action: "copyToClipboard" },
+        { label: "Copy File Full Path to Clipboard", action: "copyFullToClipboard" },
+        { label: "Copy File Relative Path to Clipboard", action: "copyRelativeToClipboard" },
       ];
       const selectedOption = await vscode.window.showQuickPick(options, {
         placeHolder: "Choose an action",
@@ -56,8 +58,11 @@ function registerCommandActiveFileInStatusBarClicked() {
         case "revealInOS":
           vscode.commands.executeCommand("revealFileInOS");
           break;
-        case "copyToClipboard":
-          vscode.env.clipboard.writeText(statusBar.text);
+        case "copyFullToClipboard":
+          vscode.env.clipboard.writeText(fullFilePath);
+          break;
+        case "copyRelativeToClipboard":
+          vscode.env.clipboard.writeText(relativeFilePath);
           break;
       }
     }
@@ -96,14 +101,17 @@ function OnStatusBarItemUpdate(textEditor) {
       return;
     }
 
-    var filePath = textEditor.document.fileName;
+    fullFilePath = textEditor.document.fileName;
+    relativeFilePath = vscode.workspace.asRelativePath(textEditor.document.fileName);
+    relativeFilePath = path.normalize(fullFilePath);
+    statusBar.color = config.color;
+
     if (!config.fullpath) {
-      filePath = vscode.workspace.asRelativePath(textEditor.document.fileName);
-      filePath = path.normalize(filePath);
+      statusBar.text = relativeFilePath;
+    } else {
+      statusBar.text = fullFilePath;
     }
 
-    statusBar.color = config.color;
-    statusBar.text = filePath;
     statusBar.show();
   }
 }
