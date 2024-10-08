@@ -103,7 +103,7 @@ function OnStatusBarItemUpdate(textEditor) {
 
     fullFilePath = textEditor.document.fileName;
     relativeFilePath = vscode.workspace.asRelativePath(textEditor.document.fileName);
-    relativeFilePath = path.normalize(fullFilePath);
+    relativeFilePath = path.normalize(relativeFilePath);
     statusBar.color = config.color;
 
     if (!config.fullpath) {
